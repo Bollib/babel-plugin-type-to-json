@@ -1,0 +1,39 @@
+{
+    "name": "babel-plugin-type-to-json",
+    "version": "1.0.0",
+    "description": "Transforms Typescript types to JSON schemas",
+    "main": "src/plugin.js",
+    "scripts": {
+        "test": "npx babel src/testFiles/file1.ts --out-file testOutputs/file1.js",
+        "test1": "npx babel src/testFiles/file1.ts --out-file testOutputs/file1.js",
+        "test2": "npx babel src/testFiles/file2.ts --out-file testOutputs/file2.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LaunchMenu/babel-plugin-type-to-json.git"
+    },
+    "keywords": [
+        "Typescript",
+        "type",
+        "json",
+        "babel",
+        "transformer"
+    ],
+    "author": "Tar van Krieken",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/LaunchMenu/babel-plugin-type-to-json/issues"
+    },
+    "homepage": "https://github.com/LaunchMenu/babel-plugin-type-to-json#readme",
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/preset-env": "^7.3.1",
+        "@babel/preset-typescript": "^7.1.0"
+    },
+    "dependencies": {
+        "@babel/core": "^7.2.2",
+        "@babel/helper-plugin-utils": "^7.0.0",
+        "@babel/plugin-syntax-typescript": "^7.2.0",
+        "@babel/plugin-transform-runtime": "^7.2.0"
+    }
+}
