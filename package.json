@@ -4,9 +4,10 @@
     "description": "Transforms Typescript types to JSON schemas",
     "main": "src/plugin.js",
     "scripts": {
-        "test": "npx babel src/testFiles/file1.ts --out-file testOutputs/file1.js",
-        "test1": "npx babel src/testFiles/file1.ts --out-file testOutputs/file1.js",
-        "test2": "npx babel src/testFiles/file2.ts --out-file testOutputs/file2.js"
+        "test": "node test/test.js",
+        "testTranspile1": "npx babel test/srcFiles/file1.ts --out-file test/outFiles/file1.js",
+        "testTranspile2": "npx babel test/srcFiles/file2.ts --out-file test/outFiles/file2.js",
+        "testTranspile3": "npx babel test/srcFiles/file3.ts --out-file test/outFiles/file3.js"
     },
     "repository": {
         "type": "git",
@@ -27,12 +28,16 @@
     "homepage": "https://github.com/LaunchMenu/babel-plugin-type-to-json#readme",
     "devDependencies": {
         "@babel/cli": "^7.2.3",
+        "@babel/plugin-proposal-class-properties": "^7.3.0",
         "@babel/preset-env": "^7.3.1",
-        "@babel/preset-typescript": "^7.1.0"
+        "@babel/preset-typescript": "^7.1.0",
+        "@babel/runtime": "^7.3.1"
     },
     "dependencies": {
         "@babel/core": "^7.2.2",
+        "@babel/helper-create-class-features-plugin": "^7.3.0",
         "@babel/helper-plugin-utils": "^7.0.0",
+        "@babel/parser": "^7.3.2",
         "@babel/plugin-syntax-typescript": "^7.2.0",
         "@babel/plugin-transform-runtime": "^7.2.0"
     }
